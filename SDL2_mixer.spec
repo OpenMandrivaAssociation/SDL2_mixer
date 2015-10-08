@@ -2,11 +2,12 @@
 %define api 2.0
 %define libname %mklibname %{name} %{api} %{major}
 %define devname %mklibname %{name} -d
+%define _disable_lto 1
 
 Summary:	Simple DirectMedia Layer 2 - mixer
 Name:		SDL2_mixer
 Version:	2.0.0
-Release:	6
+Release:	7
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_mixer/
