@@ -6,13 +6,12 @@
 
 Summary:	Simple DirectMedia Layer 2 - mixer
 Name:		SDL2_mixer
-Version:	2.0.0
-Release:	7
+Version:	2.0.1
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_mixer/
 Source0:	http://www.libsdl.org/projects/SDL_mixer/release/%{name}-%{version}.tar.gz
-Patch0:		sdl2_mixer-2.0.0-mga-libmodplug-includes.patch
 BuildRequires:	libmikmod-devel
 BuildRequires:	pkgconfig(flac)
 BuildRequires:	pkgconfig(fluidsynth)
@@ -79,10 +78,9 @@ This package contains binary to test the associated library.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-music-mod \
 	--disable-music-ogg-shared \
