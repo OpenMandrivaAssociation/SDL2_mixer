@@ -6,8 +6,8 @@
 
 Summary:	Simple DirectMedia Layer 2 - mixer
 Name:		SDL2_mixer
-Version:	2.0.2
-Release:	2
+Version:	2.0.4
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_mixer/
