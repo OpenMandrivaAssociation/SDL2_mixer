@@ -6,12 +6,12 @@
 
 Summary:	Simple DirectMedia Layer 2 - mixer
 Name:		SDL2_mixer
-Version:	2.0.4
+Version:	2.6.1
 Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_mixer/
-Source0:	http://www.libsdl.org/projects/SDL_mixer/release/%{name}-%{version}.tar.gz
+Source0:	https://github.com/libsdl-org/SDL_mixer/releases/download/release-%{version}/SDL2_mixer-%{version}.tar.gz
 BuildRequires:	libmikmod-devel
 BuildRequires:	pkgconfig(flac)
 BuildRequires:	pkgconfig(fluidsynth)
@@ -37,8 +37,6 @@ This package contains the library needed to run programs dynamically
 linked with %{name}.
 
 %files -n %{libname}
-%doc COPYING.txt
-%doc timidity/FAQ timidity/README
 %{_libdir}/lib%{name}-%{api}.so.%{major}*
 
 #----------------------------------------------------------------------------
@@ -58,7 +56,7 @@ applications which will use %{name}.
 %{_libdir}/lib%{name}.so
 %{_includedir}/SDL2/*
 %{_libdir}/pkgconfig/%{name}.pc
-
+%{_libdir}/cmake/SDL2_mixer/
 #----------------------------------------------------------------------------
 
 %package -n %{name}-player
@@ -85,8 +83,8 @@ This package contains binary to test the associated library.
 	--enable-music-mod \
 	--disable-music-ogg-shared \
 	--disable-music-flac-shared
-%make
+%make_build
 
 %install
-%makeinstall_std install-bin
+%make_install install-bin
 
