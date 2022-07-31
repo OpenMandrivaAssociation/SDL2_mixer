@@ -56,7 +56,7 @@ applications which will use %{name}.
 %{_libdir}/lib%{name}.so
 %{_includedir}/SDL2/*
 %{_libdir}/pkgconfig/%{name}.pc
-
+%{_libdir}/cmake/SDL2_mixer/
 #----------------------------------------------------------------------------
 
 %package -n %{name}-player
