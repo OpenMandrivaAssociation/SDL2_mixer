@@ -37,8 +37,6 @@ This package contains the library needed to run programs dynamically
 linked with %{name}.
 
 %files -n %{libname}
-%doc COPYING.txt
-%doc timidity/FAQ timidity/README
 %{_libdir}/lib%{name}-%{api}.so.%{major}*
 
 #----------------------------------------------------------------------------
