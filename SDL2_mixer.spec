@@ -1,13 +1,14 @@
 %define major 0
 %define api 2.0
-%define libname %mklibname %{name} %{api} %{major}
+%define libname %mklibname %{name}
+%define oldlibname %mklibname %{name} 2.0 0
 %define devname %mklibname %{name} -d
 %define _disable_lto 1
 
 Summary:	Simple DirectMedia Layer 2 - mixer
 Name:		SDL2_mixer
-Version:	2.6.3
-Release:	2
+Version:	2.8.0
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_mixer/
@@ -31,6 +32,7 @@ and SMPEG MP3 libraries.
 %package -n %{libname}
 Summary:	Main library for %{name}
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 This package contains the library needed to run programs dynamically
