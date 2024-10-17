@@ -11,7 +11,7 @@ Version:	2.8.0
 Release:	1
 License:	Zlib
 Group:		System/Libraries
-Url:		http://www.libsdl.org/projects/SDL_mixer/
+Url:		https://www.libsdl.org/projects/SDL_mixer/
 Source0:	https://github.com/libsdl-org/SDL_mixer/releases/download/release-%{version}/SDL2_mixer-%{version}.tar.gz
 BuildRequires:	libmikmod-devel
 BuildRequires:	pkgconfig(flac)
